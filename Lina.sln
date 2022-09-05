@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lina", "Lina\Lina.csproj", "{1B3EDE53-DB39-43C1-A48D-BCDB2EE46977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lina.Tests", "Lina.Tests\Lina.Tests.csproj", "{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B3EDE53-DB39-43C1-A48D-BCDB2EE46977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3EDE53-DB39-43C1-A48D-BCDB2EE46977}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3EDE53-DB39-43C1-A48D-BCDB2EE46977}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3EDE53-DB39-43C1-A48D-BCDB2EE46977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
