@@ -1,6 +1,6 @@
 ﻿namespace Lina;
 
-public struct Double3
+public partial struct Double3
 {
 	public double X { get; set; }
 	public double Y { get; set; }

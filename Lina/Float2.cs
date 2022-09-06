@@ -1,6 +1,6 @@
 ﻿namespace Lina;
 
-public struct Float2
+public partial struct Float2
 {
     public float X { get; set; }
     public float Y { get; set; }

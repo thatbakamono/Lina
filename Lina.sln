@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lina", "Lina\Lina.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lina.Tests", "Lina.Tests\Lina.Tests.csproj", "{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lina.Generators", "Lina.Generators\Lina.Generators.csproj", "{7A12043B-58A9-468B-8DEC-AFAA83FC40D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01EB9169-DCFC-42E4-ADAD-6B208F90EE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A12043B-58A9-468B-8DEC-AFAA83FC40D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A12043B-58A9-468B-8DEC-AFAA83FC40D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A12043B-58A9-468B-8DEC-AFAA83FC40D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A12043B-58A9-468B-8DEC-AFAA83FC40D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
