@@ -30,4 +30,14 @@ public partial struct Float2
     public static Float2 operator -(Float2 left, Float2 right) => new Float2(left.X - right.X, left.Y - right.Y);
     public static Float2 operator *(Float2 left, Float2 right) => new Float2(left.X * right.X, left.Y * right.Y);
     public static Float2 operator /(Float2 left, Float2 right) => new Float2(left.X / right.X, left.Y / right.Y);
+
+    public static Float2 operator +(Float2 left, float right) => new Float2(left.X + right, left.Y + right);
+    public static Float2 operator -(Float2 left, float right) => new Float2(left.X - right, left.Y - right);
+    public static Float2 operator *(Float2 left, float right) => new Float2(left.X * right, left.Y * right);
+    public static Float2 operator /(Float2 left, float right) => new Float2(left.X / right, left.Y / right);
+
+    public static Float2 operator +(float left, Float2 right) => new Float2(left + right.X, left + right.Y);
+    public static Float2 operator -(float left, Float2 right) => new Float2(left - right.X, left - right.Y);
+    public static Float2 operator *(float left, Float2 right) => new Float2(left * right.X, left * right.Y);
+    public static Float2 operator /(float left, Float2 right) => new Float2(left / right.X, left / right.Y);
 }

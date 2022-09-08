@@ -36,4 +36,14 @@ public partial struct Double4
     public static Double4 operator -(Double4 left, Double4 right) => new Double4(left.X - right.X, left.Y - right.Y, left.Z - right.Z, left.W - right.W);
     public static Double4 operator *(Double4 left, Double4 right) => new Double4(left.X * right.X, left.Y * right.Y, left.Z * right.Z, left.W * right.W);
     public static Double4 operator /(Double4 left, Double4 right) => new Double4(left.X / right.X, left.Y / right.Y, left.Z / right.Z, left.W / right.W);
+
+    public static Double4 operator +(Double4 left, double right) => new Double4(left.X + right, left.Y + right, left.Z + right, left.W + right);
+    public static Double4 operator -(Double4 left, double right) => new Double4(left.X - right, left.Y - right, left.Z - right, left.W - right);
+    public static Double4 operator *(Double4 left, double right) => new Double4(left.X * right, left.Y * right, left.Z * right, left.W * right);
+    public static Double4 operator /(Double4 left, double right) => new Double4(left.X / right, left.Y / right, left.Z / right, left.W / right);
+
+    public static Double4 operator +(double left, Double4 right) => new Double4(left + right.X, left + right.Y, left + right.Z, left + right.W);
+    public static Double4 operator -(double left, Double4 right) => new Double4(left - right.X, left - right.Y, left - right.Z, left - right.W);
+    public static Double4 operator *(double left, Double4 right) => new Double4(left * right.X, left * right.Y, left * right.Z, left * right.W);
+    public static Double4 operator /(double left, Double4 right) => new Double4(left / right.X, left / right.Y, left / right.Z, left / right.W);
 }

@@ -36,4 +36,14 @@ public partial struct Float4
     public static Float4 operator -(Float4 left, Float4 right) => new Float4(left.X - right.X, left.Y - right.Y, left.Z - right.Z, left.W - right.W);
     public static Float4 operator *(Float4 left, Float4 right) => new Float4(left.X * right.X, left.Y * right.Y, left.Z * right.Z, left.W * right.W);
     public static Float4 operator /(Float4 left, Float4 right) => new Float4(left.X / right.X, left.Y / right.Y, left.Z / right.Z, left.W / right.W);
+
+    public static Float4 operator +(Float4 left, float right) => new Float4(left.X + right, left.Y + right, left.Z + right, left.W + right);
+    public static Float4 operator -(Float4 left, float right) => new Float4(left.X - right, left.Y - right, left.Z - right, left.W - right);
+    public static Float4 operator *(Float4 left, float right) => new Float4(left.X * right, left.Y * right, left.Z * right, left.W * right);
+    public static Float4 operator /(Float4 left, float right) => new Float4(left.X / right, left.Y / right, left.Z / right, left.W / right);
+
+    public static Float4 operator +(float left, Float4 right) => new Float4(left + right.X, left + right.Y, left + right.Z, left + right.W);
+    public static Float4 operator -(float left, Float4 right) => new Float4(left - right.X, left - right.Y, left - right.Z, left - right.W);
+    public static Float4 operator *(float left, Float4 right) => new Float4(left * right.X, left * right.Y, left * right.Z, left * right.W);
+    public static Float4 operator /(float left, Float4 right) => new Float4(left / right.X, left / right.Y, left / right.Z, left / right.W);
 }

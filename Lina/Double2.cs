@@ -30,4 +30,14 @@ public partial struct Double2
     public static Double2 operator -(Double2 left, Double2 right) => new Double2(left.X - right.X, left.Y - right.Y);
     public static Double2 operator *(Double2 left, Double2 right) => new Double2(left.X * right.X, left.Y * right.Y);
     public static Double2 operator /(Double2 left, Double2 right) => new Double2(left.X / right.X, left.Y / right.Y);
+
+    public static Double2 operator +(Double2 left, double right) => new Double2(left.X + right, left.Y + right);
+    public static Double2 operator -(Double2 left, double right) => new Double2(left.X - right, left.Y - right);
+    public static Double2 operator *(Double2 left, double right) => new Double2(left.X * right, left.Y * right);
+    public static Double2 operator /(Double2 left, double right) => new Double2(left.X / right, left.Y / right);
+
+    public static Double2 operator +(double left, Double2 right) => new Double2(left + right.X, left + right.Y);
+    public static Double2 operator -(double left, Double2 right) => new Double2(left - right.X, left - right.Y);
+    public static Double2 operator *(double left, Double2 right) => new Double2(left * right.X, left * right.Y);
+    public static Double2 operator /(double left, Double2 right) => new Double2(left / right.X, left / right.Y);
 }

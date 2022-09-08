@@ -34,4 +34,14 @@ public partial struct Double3
     public static Double3 operator -(Double3 left, Double3 right) => new Double3(left.X - right.X, left.Y - right.Y, left.Z - right.Z);
     public static Double3 operator *(Double3 left, Double3 right) => new Double3(left.X * right.X, left.Y * right.Y, left.Z * right.Z);
     public static Double3 operator /(Double3 left, Double3 right) => new Double3(left.X / right.X, left.Y / right.Y, left.Z / right.Z);
+
+    public static Double3 operator +(Double3 left, double right) => new Double3(left.X + right, left.Y + right, left.Z + right);
+    public static Double3 operator -(Double3 left, double right) => new Double3(left.X - right, left.Y - right, left.Z - right);
+    public static Double3 operator *(Double3 left, double right) => new Double3(left.X * right, left.Y * right, left.Z * right);
+    public static Double3 operator /(Double3 left, double right) => new Double3(left.X / right, left.Y / right, left.Z / right);
+
+    public static Double3 operator +(double left, Double3 right) => new Double3(left + right.X, left + right.Y, left + right.Z);
+    public static Double3 operator -(double left, Double3 right) => new Double3(left - right.X, left - right.Y, left - right.Z);
+    public static Double3 operator *(double left, Double3 right) => new Double3(left * right.X, left * right.Y, left * right.Z);
+    public static Double3 operator /(double left, Double3 right) => new Double3(left / right.X, left / right.Y, left / right.Z);
 }
