@@ -17,6 +17,11 @@ public partial struct Double4
 	public double Z { get; set; }
 	public double W { get; set; }
 
+    public double Length => Math.Sqrt(X * X + Y * Y + Z * Z + W * W);
+    public double LengthSquared => X * X + Y * Y + Z * Z + W * W;
+
+    public Double4 Normalized => new Double4(X / Length, Y / Length, Z / Length, W / Length);
+
 	public Double4(double x, double y, double z, double w)
 	{
 		X = x;
@@ -46,4 +51,16 @@ public partial struct Double4
     public static Double4 operator -(double left, Double4 right) => new Double4(left - right.X, left - right.Y, left - right.Z, left - right.W);
     public static Double4 operator *(double left, Double4 right) => new Double4(left * right.X, left * right.Y, left * right.Z, left * right.W);
     public static Double4 operator /(double left, Double4 right) => new Double4(left / right.X, left / right.Y, left / right.Z, left / right.W);
+
+    public Double4 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+        Z /= Length;
+        W /= Length;
+
+        return this;
+    }
+
+    public double Dot(Double4 other) => X * other.X + Y * other.Y + Z * other.Z + W * other.W;
 }

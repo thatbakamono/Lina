@@ -13,6 +13,11 @@ public partial struct Float2
     public float X { get; set; }
     public float Y { get; set; }
 
+    public float Length => (float) Math.Sqrt(X * X + Y * Y);
+    public float LengthSquared => X * X + Y * Y;
+
+    public Float2 Normalized => new Float2(X / Length, Y / Length);
+
     public Float2(float x, float y)
     {
         X = x;
@@ -40,4 +45,14 @@ public partial struct Float2
     public static Float2 operator -(float left, Float2 right) => new Float2(left - right.X, left - right.Y);
     public static Float2 operator *(float left, Float2 right) => new Float2(left * right.X, left * right.Y);
     public static Float2 operator /(float left, Float2 right) => new Float2(left / right.X, left / right.Y);
+
+    public Float2 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+
+        return this;
+    }
+
+    public float Dot(Float2 other) => X * other.X + Y * other.Y;
 }

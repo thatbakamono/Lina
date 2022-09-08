@@ -16,6 +16,11 @@ public partial struct Double3
 	public double Y { get; set; }
 	public double Z { get; set; }
 
+    public double Length => Math.Sqrt(X * X + Y * Y + Z * Z);
+    public double LengthSquared => X * X + Y * Y + Z * Z;
+
+    public Double3 Normalized => new Double3(X / Length, Y / Length, Z / Length);
+
 	public Double3(double x, double y, double z)
 	{
 		X = x;
@@ -44,4 +49,21 @@ public partial struct Double3
     public static Double3 operator -(double left, Double3 right) => new Double3(left - right.X, left - right.Y, left - right.Z);
     public static Double3 operator *(double left, Double3 right) => new Double3(left * right.X, left * right.Y, left * right.Z);
     public static Double3 operator /(double left, Double3 right) => new Double3(left / right.X, left / right.Y, left / right.Z);
+
+    public Double3 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+        Z /= Length;
+
+        return this;
+    }
+
+    public double Dot(Double3 other) => X * other.X + Y * other.Y + Z * other.Z;
+
+    public Double3 Cross(Double3 other) => new Double3(
+        Y * other.Z - Z * other.Y,
+        Z * other.X - X * other.Z,
+        X * other.Y - Y * other.X
+    );
 }

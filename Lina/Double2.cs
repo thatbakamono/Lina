@@ -13,6 +13,11 @@ public partial struct Double2
 	public double X { get; set; }
     public double Y { get; set; }
 
+    public double Length => Math.Sqrt(X * X + Y * Y);
+    public double LengthSquared => X * X + Y * Y;
+
+    public Double2 Normalized => new Double2(X / Length, Y / Length);
+
     public Double2(double x, double y)
     {
         X = x;
@@ -40,4 +45,14 @@ public partial struct Double2
     public static Double2 operator -(double left, Double2 right) => new Double2(left - right.X, left - right.Y);
     public static Double2 operator *(double left, Double2 right) => new Double2(left * right.X, left * right.Y);
     public static Double2 operator /(double left, Double2 right) => new Double2(left / right.X, left / right.Y);
+
+    public Double2 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+
+        return this;
+    }
+
+    public double Dot(Double2 other) => X * other.X + Y * other.Y; 
 }

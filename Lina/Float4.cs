@@ -17,6 +17,11 @@ public partial struct Float4
 	public float Z { get; set; }
 	public float W { get; set; }
 
+    public float Length => (float) Math.Sqrt(X * X + Y * Y + Z * Z + W * W);
+    public float LengthSquared => X * X + Y * Y + Z * Z + W * W;
+
+    public Float4 Normalized => new Float4(X / Length, Y / Length, Z / Length, W / Length);
+
 	public Float4(float x, float y, float z, float w)
 	{
 		X = x;
@@ -46,4 +51,16 @@ public partial struct Float4
     public static Float4 operator -(float left, Float4 right) => new Float4(left - right.X, left - right.Y, left - right.Z, left - right.W);
     public static Float4 operator *(float left, Float4 right) => new Float4(left * right.X, left * right.Y, left * right.Z, left * right.W);
     public static Float4 operator /(float left, Float4 right) => new Float4(left / right.X, left / right.Y, left / right.Z, left / right.W);
+
+    public Float4 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+        Z /= Length;
+        W /= Length;
+
+        return this;
+    }
+
+    public float Dot(Float4 other) => X * other.X + Y * other.Y + Z * other.Z + W * other.W;
 }

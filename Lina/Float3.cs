@@ -16,6 +16,11 @@ public partial struct Float3
 	public float Y { get; set; }
 	public float Z { get; set; }
 
+    public float Length => (float) Math.Sqrt(X * X + Y * Y + Z * Z);
+    public float LengthSquared => X * X + Y * Y + Z * Z;
+
+    public Float3 Normalized => new Float3(X / Length, Y / Length, Z / Length);
+
 	public Float3(float x, float y, float z)
 	{
 		X = x;
@@ -44,4 +49,21 @@ public partial struct Float3
     public static Float3 operator -(float left, Float3 right) => new Float3(left - right.X, left - right.Y, left - right.Z);
     public static Float3 operator *(float left, Float3 right) => new Float3(left * right.X, left * right.Y, left * right.Z);
     public static Float3 operator /(float left, Float3 right) => new Float3(left / right.X, left / right.Y, left / right.Z);
+
+    public Float3 Normalize()
+    {
+        X /= Length;
+        Y /= Length;
+        Z /= Length;
+
+        return this;
+    }
+
+    public float Dot(Float3 other) => X * other.X + Y * other.Y + Z * other.Z;
+
+    public Float3 Cross(Float3 other) => new Float3(
+        Y * other.Z - Z * other.Y,
+        Z * other.X - X * other.Z,
+        X * other.Y - Y * other.X
+    );
 }
