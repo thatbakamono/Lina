@@ -59,4 +59,68 @@ public struct Float4x4
 		{ left[2, 0] / right[2, 0], left[2, 1] / right[2, 1], left[2, 2] / right[2, 2], left[2, 3] / right[2, 3] },
 		{ left[3, 0] / right[3, 0], left[3, 1] / right[3, 1], left[3, 2] / right[3, 2], left[3, 3] / right[3, 3] }
 	});
+
+	public static Float4x4 operator +(Float4x4 left, float right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] + right, left[0, 1] + right, left[0, 2] + right, left[0, 3] + right },
+		{ left[1, 0] + right, left[1, 1] + right, left[1, 2] + right, left[1, 3] + right },
+		{ left[2, 0] + right, left[2, 1] + right, left[2, 2] + right, left[2, 3] + right },
+		{ left[3, 0] + right, left[3, 1] + right, left[3, 2] + right, left[3, 3] + right }
+	});
+
+	public static Float4x4 operator -(Float4x4 left, float right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] - right, left[0, 1] - right, left[0, 2] - right, left[0, 3] - right },
+		{ left[1, 0] - right, left[1, 1] - right, left[1, 2] - right, left[1, 3] - right },
+		{ left[2, 0] - right, left[2, 1] - right, left[2, 2] - right, left[2, 3] - right },
+		{ left[3, 0] - right, left[3, 1] - right, left[3, 2] - right, left[3, 3] - right }
+	});
+
+	public static Float4x4 operator *(Float4x4 left, float right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] * right, left[0, 1] * right, left[0, 2] * right, left[0, 3] * right },
+		{ left[1, 0] * right, left[1, 1] * right, left[1, 2] * right, left[1, 3] * right },
+		{ left[2, 0] * right, left[2, 1] * right, left[2, 2] * right, left[2, 3] * right },
+		{ left[3, 0] * right, left[3, 1] * right, left[3, 2] * right, left[3, 3] * right }
+	});
+
+	public static Float4x4 operator /(Float4x4 left, float right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] / right, left[0, 1] / right, left[0, 2] / right, left[0, 3] / right },
+		{ left[1, 0] / right, left[1, 1] / right, left[1, 2] / right, left[1, 3] / right },
+		{ left[2, 0] / right, left[2, 1] / right, left[2, 2] / right, left[2, 3] / right },
+		{ left[3, 0] / right, left[3, 1] / right, left[3, 2] / right, left[3, 3] / right }
+	});
+
+	public static Float4x4 operator +(float left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left + right[0, 0], left + right[0, 1], left + right[0, 2], left + right[0, 3] },
+		{ left + right[1, 0], left + right[1, 1], left + right[1, 2], left + right[1, 3] },
+		{ left + right[2, 0], left + right[2, 1], left + right[2, 2], left + right[2, 3] },
+		{ left + right[3, 0], left + right[3, 1], left + right[3, 2], left + right[3, 3] }
+	});
+
+	public static Float4x4 operator -(float left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left - right[0, 0], left - right[0, 1], left - right[0, 2], left - right[0, 3] },
+		{ left - right[1, 0], left - right[1, 1], left - right[1, 2], left - right[1, 3] },
+		{ left - right[2, 0], left - right[2, 1], left - right[2, 2], left - right[2, 3] },
+		{ left - right[3, 0], left - right[3, 1], left - right[3, 2], left - right[3, 3] }
+	});
+
+	public static Float4x4 operator *(float left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left * right[0, 0], left * right[0, 1], left * right[0, 2], left * right[0, 3] },
+		{ left * right[1, 0], left * right[1, 1], left * right[1, 2], left * right[1, 3] },
+		{ left * right[2, 0], left * right[2, 1], left * right[2, 2], left * right[2, 3] },
+		{ left * right[3, 0], left * right[3, 1], left * right[3, 2], left * right[3, 3] }
+	});
+
+	public static Float4x4 operator /(float left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left / right[0, 0], left / right[0, 1], left / right[0, 2], left / right[0, 3] },
+		{ left / right[1, 0], left / right[1, 1], left / right[1, 2], left / right[1, 3] },
+		{ left / right[2, 0], left / right[2, 1], left / right[2, 2], left / right[2, 3] },
+		{ left / right[3, 0], left / right[3, 1], left / right[3, 2], left / right[3, 3] }
+	});
 }
