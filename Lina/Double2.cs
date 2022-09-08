@@ -18,4 +18,7 @@ public partial struct Double2
         X = x;
         Y = y;
     }
+
+    public static explicit operator Double2(Double3 value) => new Double2(value.X, value.Y);
+    public static explicit operator Double2(Double4 value) => new Double2(value.X, value.Y);
 }

@@ -24,4 +24,7 @@ public partial struct Float4
 		Z = z;
 		W = w;
 	}
+
+	public static implicit operator Float4(Float2 value) => new Float4(value.X, value.Y, 0.0f, 0.0f);
+	public static implicit operator Float4(Float3 value) => new Float4(value.X, value.Y, value.Z, 0.0f);
 }

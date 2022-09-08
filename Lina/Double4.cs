@@ -24,4 +24,7 @@ public partial struct Double4
 		Z = z;
 		W = w;
 	}
+
+	public static implicit operator Double4(Double2 value) => new Double4(value.X, value.Y, 0.0, 0.0);
+	public static implicit operator Double4(Double3 value) => new Double4(value.X, value.Y, value.Z, 0.0);
 }

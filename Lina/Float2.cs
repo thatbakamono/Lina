@@ -18,4 +18,7 @@ public partial struct Float2
         X = x;
         Y = y;
     }
+
+    public static explicit operator Float2(Float3 value) => new Float2(value.X, value.Y);
+    public static explicit operator Float2(Float4 value) => new Float2(value.X, value.Y);
 }

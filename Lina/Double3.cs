@@ -22,4 +22,7 @@ public partial struct Double3
 		Y = y;
 		Z = z;
 	}
+
+	public static implicit operator Double3(Double2 value) => new Double3(value.X, value.Y, 0.0);
+	public static explicit operator Double3(Double4 value) => new Double3(value.X, value.Y, value.Z);
 }
