@@ -110,4 +110,60 @@ public struct Double3x3
 		{ left / right[1, 0], left / right[1, 1], left / right[1, 2] },
 		{ left / right[2, 0], left / right[2, 1], left / right[2, 2] }
 	});
+
+	public static Double3x3 operator +(Double3x3 left, Double3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left[0, 0] + right.X, left[0, 1] + right.Y, left[0, 2] + right.Z },
+		{ left[1, 0] + right.X, left[1, 1] + right.Y, left[1, 2] + right.Z },
+		{ left[2, 0] + right.X, left[2, 1] + right.Y, left[2, 2] + right.Z }
+	});
+
+	public static Double3x3 operator -(Double3x3 left, Double3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left[0, 0] - right.X, left[0, 1] - right.Y, left[0, 2] - right.Z },
+		{ left[1, 0] - right.X, left[1, 1] - right.Y, left[1, 2] - right.Z },
+		{ left[2, 0] - right.X, left[2, 1] - right.Y, left[2, 2] - right.Z }
+	});
+
+	public static Double3x3 operator *(Double3x3 left, Double3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left[0, 0] * right.X, left[0, 1] * right.Y, left[0, 2] * right.Z },
+		{ left[1, 0] * right.X, left[1, 1] * right.Y, left[1, 2] * right.Z },
+		{ left[2, 0] * right.X, left[2, 1] * right.Y, left[2, 2] * right.Z }
+	});
+
+	public static Double3x3 operator /(Double3x3 left, Double3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left[0, 0] / right.X, left[0, 1] / right.Y, left[0, 2] / right.Z },
+		{ left[1, 0] / right.X, left[1, 1] / right.Y, left[1, 2] / right.Z },
+		{ left[2, 0] / right.X, left[2, 1] / right.Y, left[2, 2] / right.Z }
+	});
+
+	public static Double3x3 operator +(Double3 left, Double3x3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left.X + right[0, 0], left.Y + right[0, 1], left.Z + right[0, 2] },
+		{ left.X + right[1, 0], left.Y + right[1, 1], left.Z + right[1, 2] },
+		{ left.X + right[2, 0], left.Y + right[2, 1], left.Z + right[2, 2] }
+	});
+
+	public static Double3x3 operator -(Double3 left, Double3x3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left.X - right[0, 0], left.Y - right[0, 1], left.Z - right[0, 2] },
+		{ left.X - right[1, 0], left.Y - right[1, 1], left.Z - right[1, 2] },
+		{ left.X - right[2, 0], left.Y - right[2, 1], left.Z - right[2, 2] }
+	});
+
+	public static Double3x3 operator *(Double3 left, Double3x3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left.X * right[0, 0], left.Y * right[0, 1], left.Z * right[0, 2] },
+		{ left.X * right[1, 0], left.Y * right[1, 1], left.Z * right[1, 2] },
+		{ left.X * right[2, 0], left.Y * right[2, 1], left.Z * right[2, 2] }
+	});
+
+	public static Double3x3 operator /(Double3 left, Double3x3 right) => new Double3x3(new double[3, 3]
+	{
+		{ left.X / right[0, 0], left.Y / right[0, 1], left.Z / right[0, 2] },
+		{ left.X / right[1, 0], left.Y / right[1, 1], left.Z / right[1, 2] },
+		{ left.X / right[2, 0], left.Y / right[2, 1], left.Z / right[2, 2] }
+	});
 }

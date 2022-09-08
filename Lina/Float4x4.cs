@@ -123,4 +123,68 @@ public struct Float4x4
 		{ left / right[2, 0], left / right[2, 1], left / right[2, 2], left / right[2, 3] },
 		{ left / right[3, 0], left / right[3, 1], left / right[3, 2], left / right[3, 3] }
 	});
+
+	public static Float4x4 operator +(Float4x4 left, Float4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] + right.X, left[0, 1] + right.Y, left[0, 2] + right.Z, left[0, 3] + right.W },
+		{ left[1, 0] + right.X, left[1, 1] + right.Y, left[1, 2] + right.Z, left[1, 3] + right.W },
+		{ left[2, 0] + right.X, left[2, 1] + right.Y, left[2, 2] + right.Z, left[2, 3] + right.W },
+		{ left[3, 0] + right.X, left[3, 1] + right.Y, left[3, 2] + right.Z, left[3, 3] + right.W }
+	});
+
+	public static Float4x4 operator -(Float4x4 left, Float4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] - right.X, left[0, 1] - right.Y, left[0, 2] - right.Z, left[0, 3] - right.W },
+		{ left[1, 0] - right.X, left[1, 1] - right.Y, left[1, 2] - right.Z, left[1, 3] - right.W },
+		{ left[2, 0] - right.X, left[2, 1] - right.Y, left[2, 2] - right.Z, left[2, 3] - right.W },
+		{ left[3, 0] - right.X, left[3, 1] - right.Y, left[3, 2] - right.Z, left[3, 3] - right.W }
+	});
+
+	public static Float4x4 operator *(Float4x4 left, Float4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] * right.X, left[0, 1] * right.Y, left[0, 2] * right.Z, left[0, 3] * right.W },
+		{ left[1, 0] * right.X, left[1, 1] * right.Y, left[1, 2] * right.Z, left[1, 3] * right.W },
+		{ left[2, 0] * right.X, left[2, 1] * right.Y, left[2, 2] * right.Z, left[2, 3] * right.W },
+		{ left[3, 0] * right.X, left[3, 1] * right.Y, left[3, 2] * right.Z, left[3, 3] * right.W }
+	});
+
+	public static Float4x4 operator /(Float4x4 left, Float4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left[0, 0] / right.X, left[0, 1] / right.Y, left[0, 2] / right.Z, left[0, 3] / right.W },
+		{ left[1, 0] / right.X, left[1, 1] / right.Y, left[1, 2] / right.Z, left[1, 3] / right.W },
+		{ left[2, 0] / right.X, left[2, 1] / right.Y, left[2, 2] / right.Z, left[2, 3] / right.W },
+		{ left[3, 0] / right.X, left[3, 1] / right.Y, left[3, 2] / right.Z, left[3, 3] / right.W }
+	});
+
+	public static Float4x4 operator +(Float4 left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left.X + right[0, 0], left.Y + right[0, 1], left.Z + right[0, 2], left.W + right[0, 3] },
+		{ left.X + right[1, 0], left.Y + right[1, 1], left.Z + right[1, 2], left.W + right[1, 3] },
+		{ left.X + right[2, 0], left.Y + right[2, 1], left.Z + right[2, 2], left.W + right[2, 3] },
+		{ left.X + right[3, 0], left.Y + right[3, 1], left.Z + right[3, 2], left.W + right[3, 3] }
+	});
+
+	public static Float4x4 operator -(Float4 left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left.X - right[0, 0], left.Y - right[0, 1], left.Z - right[0, 2], left.W - right[0, 3] },
+		{ left.X - right[1, 0], left.Y - right[1, 1], left.Z - right[1, 2], left.W - right[1, 3] },
+		{ left.X - right[2, 0], left.Y - right[2, 1], left.Z - right[2, 2], left.W - right[2, 3] },
+		{ left.X - right[3, 0], left.Y - right[3, 1], left.Z - right[3, 2], left.W - right[3, 3] }
+	});
+
+	public static Float4x4 operator *(Float4 left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left.X * right[0, 0], left.Y * right[0, 1], left.Z * right[0, 2], left.W * right[0, 3] },
+		{ left.X * right[1, 0], left.Y * right[1, 1], left.Z * right[1, 2], left.W * right[1, 3] },
+		{ left.X * right[2, 0], left.Y * right[2, 1], left.Z * right[2, 2], left.W * right[2, 3] },
+		{ left.X * right[3, 0], left.Y * right[3, 1], left.Z * right[3, 2], left.W * right[3, 3] }
+	});
+
+	public static Float4x4 operator /(Float4 left, Float4x4 right) => new Float4x4(new float[4, 4]
+	{
+		{ left.X / right[0, 0], left.Y / right[0, 1], left.Z / right[0, 2], left.W / right[0, 3] },
+		{ left.X / right[1, 0], left.Y / right[1, 1], left.Z / right[1, 2], left.W / right[1, 3] },
+		{ left.X / right[2, 0], left.Y / right[2, 1], left.Z / right[2, 2], left.W / right[2, 3] },
+		{ left.X / right[3, 0], left.Y / right[3, 1], left.Z / right[3, 2], left.W / right[3, 3] }
+	});
 }
