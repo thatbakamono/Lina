@@ -22,9 +22,9 @@ public struct Double4x4
 		_values = values;
 	}
 
-	public double this[int row, int column]
+	public double this[int column, int row]
 	{
-		get => _values[row, column];
-		set => _values[row, column] = value;
+		get => _values[column, row];
+		set => _values[column, row] = value;
 	}
 }

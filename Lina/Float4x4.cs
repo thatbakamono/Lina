@@ -22,9 +22,9 @@ public struct Float4x4
 		_values = values;
 	}
 
-	public float this[int row, int column]
+	public float this[int column, int row]
 	{
-		get => _values[row, column];
-		set => _values[row, column] = value;
+		get => _values[column, row];
+		set => _values[column, row] = value;
 	}
 }
