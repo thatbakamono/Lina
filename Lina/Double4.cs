@@ -31,4 +31,9 @@ public partial struct Double4
 	public static implicit operator Double4(Float2 value) => new Double4(value.X, value.Y, 0.0, 0.0);
     public static implicit operator Double4(Float3 value) => new Double4(value.X, value.Y, value.Z, 0.0);
     public static implicit operator Double4(Float4 value) => new Double4(value.X, value.Y, value.Z, value.W);
+
+    public static Double4 operator +(Double4 left, Double4 right) => new Double4(left.X + right.X, left.Y + right.Y, left.Z + right.Z, left.W + right.W);
+    public static Double4 operator -(Double4 left, Double4 right) => new Double4(left.X - right.X, left.Y - right.Y, left.Z - right.Z, left.W - right.W);
+    public static Double4 operator *(Double4 left, Double4 right) => new Double4(left.X * right.X, left.Y * right.Y, left.Z * right.Z, left.W * right.W);
+    public static Double4 operator /(Double4 left, Double4 right) => new Double4(left.X / right.X, left.Y / right.Y, left.Z / right.Z, left.W / right.W);
 }

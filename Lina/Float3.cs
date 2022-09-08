@@ -29,4 +29,9 @@ public partial struct Float3
     public static explicit operator Float3(Double2 value) => new Float3((float) value.X, (float) value.Y, 0.0f);
     public static explicit operator Float3(Double3 value) => new Float3((float) value.X, (float) value.Y, (float) value.Z);
     public static explicit operator Float3(Double4 value) => new Float3((float) value.X, (float) value.Y, (float) value.Z);
+
+    public static Float3 operator +(Float3 left, Float3 right) => new Float3(left.X + right.X, left.Y + right.Y, left.Z + right.Z);
+    public static Float3 operator -(Float3 left, Float3 right) => new Float3(left.X - right.X, left.Y - right.Y, left.Z - right.Z);
+    public static Float3 operator *(Float3 left, Float3 right) => new Float3(left.X * right.X, left.Y * right.Y, left.Z * right.Z);
+    public static Float3 operator /(Float3 left, Float3 right) => new Float3(left.X / right.X, left.Y / right.Y, left.Z / right.Z);
 }

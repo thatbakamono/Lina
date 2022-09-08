@@ -31,4 +31,9 @@ public partial struct Float4
 	public static explicit operator Float4(Double2 value) => new Float4((float) value.X, (float) value.Y, 0.0f, 0.0f);
     public static explicit operator Float4(Double3 value) => new Float4((float) value.X, (float) value.Y, (float) value.Z, 0.0f);
     public static explicit operator Float4(Double4 value) => new Float4((float) value.X, (float) value.Y, (float) value.Z, (float) value.W);
+
+    public static Float4 operator +(Float4 left, Float4 right) => new Float4(left.X + right.X, left.Y + right.Y, left.Z + right.Z, left.W + right.W);
+    public static Float4 operator -(Float4 left, Float4 right) => new Float4(left.X - right.X, left.Y - right.Y, left.Z - right.Z, left.W - right.W);
+    public static Float4 operator *(Float4 left, Float4 right) => new Float4(left.X * right.X, left.Y * right.Y, left.Z * right.Z, left.W * right.W);
+    public static Float4 operator /(Float4 left, Float4 right) => new Float4(left.X / right.X, left.Y / right.Y, left.Z / right.Z, left.W / right.W);
 }

@@ -25,4 +25,9 @@ public partial struct Double2
     public static implicit operator Double2(Float2 value) => new Double2(value.X, value.Y);
     public static explicit operator Double2(Float3 value) => new Double2(value.X, value.Y);
     public static explicit operator Double2(Float4 value) => new Double2(value.X, value.Y);
+
+    public static Double2 operator +(Double2 left, Double2 right) => new Double2(left.X + right.X, left.Y + right.Y);
+    public static Double2 operator -(Double2 left, Double2 right) => new Double2(left.X - right.X, left.Y - right.Y);
+    public static Double2 operator *(Double2 left, Double2 right) => new Double2(left.X * right.X, left.Y * right.Y);
+    public static Double2 operator /(Double2 left, Double2 right) => new Double2(left.X / right.X, left.Y / right.Y);
 }

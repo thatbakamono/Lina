@@ -25,4 +25,9 @@ public partial struct Float2
     public static explicit operator Float2(Double2 value) => new Float2((float) value.X, (float) value.Y);
     public static explicit operator Float2(Double3 value) => new Float2((float) value.X, (float) value.Y);
     public static explicit operator Float2(Double4 value) => new Float2((float) value.X, (float) value.Y);
+
+    public static Float2 operator +(Float2 left, Float2 right) => new Float2(left.X + right.X, left.Y + right.Y);
+    public static Float2 operator -(Float2 left, Float2 right) => new Float2(left.X - right.X, left.Y - right.Y);
+    public static Float2 operator *(Float2 left, Float2 right) => new Float2(left.X * right.X, left.Y * right.Y);
+    public static Float2 operator /(Float2 left, Float2 right) => new Float2(left.X / right.X, left.Y / right.Y);
 }
