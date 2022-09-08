@@ -21,4 +21,8 @@ public partial struct Double2
 
     public static explicit operator Double2(Double3 value) => new Double2(value.X, value.Y);
     public static explicit operator Double2(Double4 value) => new Double2(value.X, value.Y);
+
+    public static implicit operator Double2(Float2 value) => new Double2(value.X, value.Y);
+    public static explicit operator Double2(Float3 value) => new Double2(value.X, value.Y);
+    public static explicit operator Double2(Float4 value) => new Double2(value.X, value.Y);
 }

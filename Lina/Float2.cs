@@ -21,4 +21,8 @@ public partial struct Float2
 
     public static explicit operator Float2(Float3 value) => new Float2(value.X, value.Y);
     public static explicit operator Float2(Float4 value) => new Float2(value.X, value.Y);
+
+    public static explicit operator Float2(Double2 value) => new Float2((float) value.X, (float) value.Y);
+    public static explicit operator Float2(Double3 value) => new Float2((float) value.X, (float) value.Y);
+    public static explicit operator Float2(Double4 value) => new Float2((float) value.X, (float) value.Y);
 }
