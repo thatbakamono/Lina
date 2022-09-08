@@ -2,6 +2,8 @@
 
 public struct QuaternionDouble
 {
+	public QuaternionDouble Identity => new QuaternionDouble(1.0, 0.0, 0.0, 0.0);
+
 	public double A { get; set; }
 	public double B { get; set; }
 	public double C { get; set; }

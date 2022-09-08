@@ -4,6 +4,13 @@ namespace Lina;
 
 public struct Float3x3
 {
+	public Float3x3 Identity => new Float3x3(new float[3, 3]
+	{
+		{ 1.0f, 0.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f },
+		{ 0.0f, 0.0f, 1.0f }
+	});
+
 	private readonly float[,] _values = new float[3, 3];
 
 	public Float3x3(float[,] values)

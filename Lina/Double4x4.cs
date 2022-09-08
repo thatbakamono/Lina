@@ -4,6 +4,14 @@ namespace Lina;
 
 public struct Double4x4
 {
+	public Double4x4 Identity => new Double4x4(new double[4, 4]
+	{
+		{ 1.0, 0.0, 0.0, 0.0 },
+		{ 0.0, 1.0, 0.0, 0.0 },
+		{ 0.0, 0.0, 1.0, 0.0 },
+		{ 0.0, 0.0, 0.0, 1.0 }
+	});
+
 	private readonly double[,] _values = new double[4, 4];
 
 	public Double4x4(double[,] values)

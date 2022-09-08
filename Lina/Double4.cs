@@ -2,6 +2,16 @@
 
 public partial struct Double4
 {
+    public Double4 Zero => new Double4(0.0, 0.0, 0.0, 0.0);
+    public Double4 One => new Double4(1.0, 1.0, 0.0, 0.0);
+
+    public Double4 Up => new Double4(0.0, 1.0, 0.0, 0.0);
+    public Double4 Down => new Double4(0.0, -1.0, 0.0, 0.0);
+    public Double4 Left => new Double4(-1.0, 0.0, 0.0, 0.0);
+    public Double4 Right => new Double4(1.0, 0.0, 0.0, 0.0);
+    public Double4 Forward => new Double4(0.0, 0.0, 1.0, 0.0);
+    public Double4 Backward => new Double4(0.0, 0.0, -1.0, 0.0);
+
 	public double X { get; set; }
 	public double Y { get; set; }
 	public double Z { get; set; }

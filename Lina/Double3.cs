@@ -2,6 +2,16 @@
 
 public partial struct Double3
 {
+    public Double3 Zero => new Double3(0.0, 0.0, 0.0);
+    public Double3 One => new Double3(1.0, 1.0, 0.0);
+
+    public Double3 Up => new Double3(0.0, 1.0, 0.0);
+    public Double3 Down => new Double3(0.0, -1.0, 0.0);
+    public Double3 Left => new Double3(-1.0, 0.0, 0.0);
+    public Double3 Right => new Double3(1.0, 0.0, 0.0);
+    public Double3 Forward => new Double3(0.0, 0.0, 1.0);
+    public Double3 Backward => new Double3(0.0, 0.0, -1.0);
+
 	public double X { get; set; }
 	public double Y { get; set; }
 	public double Z { get; set; }

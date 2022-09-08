@@ -4,6 +4,14 @@ namespace Lina;
 
 public struct Float4x4
 {
+	public Float4x4 Identity => new Float4x4(new float[4, 4]
+	{
+		{ 1.0f, 0.0f, 0.0f, 0.0f },
+		{ 0.0f, 1.0f, 0.0f, 0.0f },
+		{ 0.0f, 0.0f, 1.0f, 0.0f },
+		{ 0.0f, 0.0f, 0.0f, 1.0f }
+	});
+
 	private readonly float[,] _values = new float[4, 4];
 
 	public Float4x4(float[,] values)
