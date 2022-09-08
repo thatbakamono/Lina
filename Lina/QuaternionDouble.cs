@@ -16,4 +16,6 @@ public struct QuaternionDouble
 		C = c;
 		D = d;
 	}
+
+	public static implicit operator QuaternionDouble(QuaternionFloat value) => new QuaternionDouble(value.A, value.B, value.C, value.D);
 }
