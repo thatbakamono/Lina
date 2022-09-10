@@ -24,6 +24,32 @@ public partial struct Float2
         Y = y;
     }
 
+    public float this[int index]
+    {
+        get => index switch {
+            0 => X,
+            1 => Y,
+            _ => throw new IndexOutOfRangeException(),
+        };
+        set
+        {
+            switch (index)
+            {
+                case 0:
+                    X = value;
+
+                    break;
+
+                case 1:
+                    Y = value;
+
+                    break;
+                default:
+                    throw new IndexOutOfRangeException();
+            }
+        }
+    }
+
     public static explicit operator Float2(Float3 value) => new Float2(value.X, value.Y);
     public static explicit operator Float2(Float4 value) => new Float2(value.X, value.Y);
 

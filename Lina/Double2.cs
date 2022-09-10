@@ -24,6 +24,32 @@ public partial struct Double2
         Y = y;
     }
 
+    public double this[int index]
+    {
+        get => index switch {
+            0 => X,
+            1 => Y,
+            _ => throw new IndexOutOfRangeException(),
+        };
+        set
+        {
+            switch (index)
+            {
+                case 0:
+                    X = value;
+
+                    break;
+
+                case 1:
+                    Y = value;
+
+                    break;
+                default:
+                    throw new IndexOutOfRangeException();
+            }
+        }
+    }
+
     public static explicit operator Double2(Double3 value) => new Double2(value.X, value.Y);
     public static explicit operator Double2(Double4 value) => new Double2(value.X, value.Y);
 

@@ -28,6 +28,37 @@ public partial struct Double3
 		Z = z;
 	}
 
+    public double this[int index]
+    {
+        get => index switch {
+            0 => X,
+            1 => Y,
+            2 => Z,
+            _ => throw new IndexOutOfRangeException(),
+        };
+        set
+        {
+            switch (index)
+            {
+                case 0:
+                    X = value;
+
+                    break;
+
+                case 1:
+                    Y = value;
+
+                    break;
+                case 2:
+                    Z = value;
+
+                    break;
+                default:
+                    throw new IndexOutOfRangeException();
+            }
+        }
+    }
+
 	public static implicit operator Double3(Double2 value) => new Double3(value.X, value.Y, 0.0);
 	public static explicit operator Double3(Double4 value) => new Double3(value.X, value.Y, value.Z);
 

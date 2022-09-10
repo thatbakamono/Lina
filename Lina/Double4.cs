@@ -30,6 +30,42 @@ public partial struct Double4
 		W = w;
 	}
 
+    public double this[int index]
+    {
+        get => index switch {
+            0 => X,
+            1 => Y,
+            2 => Z,
+            3 => W,
+            _ => throw new IndexOutOfRangeException(),
+        };
+        set
+        {
+            switch (index)
+            {
+                case 0:
+                    X = value;
+
+                    break;
+
+                case 1:
+                    Y = value;
+
+                    break;
+                case 2:
+                    Z = value;
+
+                    break;
+                case 3:
+                    W = value;
+
+                    break;
+                default:
+                    throw new IndexOutOfRangeException();
+            }
+        }
+    }
+
 	public static implicit operator Double4(Double2 value) => new Double4(value.X, value.Y, 0.0, 0.0);
 	public static implicit operator Double4(Double3 value) => new Double4(value.X, value.Y, value.Z, 0.0);
 
